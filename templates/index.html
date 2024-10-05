@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+        <h1 class="text-2xl font-bold mb-4 text-center">Deepfake Detection</h1>
+        <form id="uploadForm" enctype="multipart/form-data" method="POST" action="/upload">
+            <label class="block mb-2 text-sm font-medium text-gray-700" for="file">Upload a video:</label>
+            <input type="file" id="file" name="file" accept="video/*" class="mb-4 w-full border border-gray-300 p-2 rounded-md" required>
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Check Video</button>
+        </form>
+    </div>
+</body>
+</html>

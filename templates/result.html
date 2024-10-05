@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detection Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
+        <h1 class="text-2xl font-bold mb-4">Detection Result</h1>
+        <p class="text-lg mb-4">The video is classified as: <span class="font-semibold">{{ label }}</span></p>
+        
+        <h2 class="text-xl font-bold mb-2">Extracted Frames:</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            {% for frame in frames %}
+                <div class="bg-gray-200 p-2 rounded-md shadow">
+                    <img src="data:image/jpeg;base64,{{ frame }}" alt="Extracted Frame" class="w-full h-auto rounded-md">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
